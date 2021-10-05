@@ -1,0 +1,27 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Django To Do List App</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static '/todoList/style.css' %}">
+</head>
+<body>
+
+<div id="myDIV" class="header">
+  <h2 style="margin:5px">ToDo List</h2>
+  <form action="" method="POST">
+    {% csrf_token %}
+    <input type="text" name="title" id="myInput" placeholder="Title...">
+    <button type="submit" class="addBtn">Add</button>
+  </form>
+</div>
+
+<ul id="myUL">
+  {% for todo in todos reversed %}
+  <li>{{todo.title|title}} <span class="close"><a style="text-decoration: none; color: black;" href="{% url 'todoList:delete' pk=todo.pk %}">Delete</a></span></li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>

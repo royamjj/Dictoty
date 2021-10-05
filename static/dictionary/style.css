@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.829), rgb(73, 73, 73), rgba(0, 0, 0, 0.829));
+}
+
+.heading{
+    color: rgb(255, 153, 0);
+    display: flex;
+    justify-content: center;
+    font-size: 5rem;
+    font-weight: 500;
+    margin: 50px;
+}
+.word{
+    justify-content:center;
+    font-size: 3rem;
+    display: flex;
+    color: white;
+    align-items: baseline;
+    margin-bottom: 50px;
+}
+.input-area{
+    font-size: 1.5rem;
+    padding: 4px;
+    border: 0;
+}
+.btn{
+    font-size: 1.5rem;
+    border: 0;
+    padding: 4px;
+    background: rgb(255, 101, 101);
+    color: white;
+}
+.output{
+    margin: auto;
+    width: 50%;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+span{
+
+    font-size: 2rem;
+    font-weight: 300;
+}
+.output div{
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+.verb, .noun{
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}

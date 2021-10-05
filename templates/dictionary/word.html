@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/dictionary/style.css' %}">
+    <title>Dictionary</title>
+</head>
+<body>
+    <div class="box">
+        <div class="heading">__YourDictionary__</div>
+        <div class="word">
+            <form class="form" action="{% url 'dictionary:index' %}" method="POST">
+                {% csrf_token %}
+                <label class="label">Word: </label>
+                <input class="input-area" type="text" name="search" placeholder="Enter word">
+                <button class="btn" type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="output">
+            <div class="verb"><span>Verb:</span> {{Verb}}</div>
+            <div class="noun"><span>Noun:</span> {{Noun}}</div>
+            <div class="adjective"><span>Adjective:</span> {{Adjective}}</div>
+        </div>
+    </div>
+</body>
+</html>

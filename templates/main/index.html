@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'main/styles.css' %}" />
+    <title>Dictoty</title>
+  </head>
+  <body>
+      <div class="heading">
+        <div class="logo">--D</div>
+        <div class="name">ictoty--</div>
+      </div>
+      <div class="box">
+        <div class="one">
+          <a href="{% url 'todoList:index' %}">ToDo List</a>
+          <div class="one-hidden">
+            A basic ToDo list app made using Django and SQL on back end and HTML
+            and CSS on front.
+          </div>
+        </div>
+
+        <div class="two">
+          <a href="{% url 'mapty:index' %}">Mapty</a>
+          <div class="two-hidden">
+            An app nade for planning workouts at different places using maps.
+            Back end uses Django rest is taken care by Javascript.
+          </div>
+        </div>
+
+        <div class="three">
+          <a href="{% url 'dictionary:index' %}">Dictionary</a>
+          <div class="three-hidden">
+            A dictionary app. Enter a word and get Noun, Verb and Adjective.
+          </div>
+        </div>
+    </div>
+  </body>
+</html>

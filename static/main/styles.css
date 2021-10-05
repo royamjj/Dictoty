@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+}
+html {
+  background: linear-gradient(to right, #200122, #6f0000);
+}
+.heading {
+  background-color: rgba(0, 0, 0, 0.253);
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.name {
+  font-size: 4rem;
+}
+.logo {
+  font-size: 6rem;
+}
+.name,
+.logo {
+  font-weight: 700;
+  background: linear-gradient(to top, orange, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.one,
+.two,
+.three {
+  position: relative;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: burlywood;
+  font-size: 1.5rem;
+  font-weight: 500;
+  max-width: 32%;
+  transition: all 0.2s linear;
+  animation: bringin 1s linear;
+}
+
+.box {
+  height: 40%;
+  background-color: brown;
+  margin: 50px auto;
+  max-width: 1000px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.one-hidden,
+.two-hidden,
+.three-hidden {
+  position: absolute;
+  background-color: chocolate;
+  border-radius: 5px;
+  padding: 5px;
+  top: 110%;
+  left: 0%;
+  visibility: hidden;
+  width: 200%;
+}
+.one:hover > .one-hidden,
+.two:hover > .two-hidden,
+.three:hover > .three-hidden {
+  animation: 0.2s fadein;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+.one:hover,
+.two:hover,
+.three:hover {
+  transform: translateY(-15px);
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes bringin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes back {
+}
+a:link {
+  text-decoration: none;
+  background-color: inherit;
+  color: rgb(70, 11, 62);
+}
+a:hover {
+  text-decoration: underline;
+}
