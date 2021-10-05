@@ -1,1 +1,1 @@
-web: gunicorn ALL_IN_ONE.wsgi
+web: gunicorn ALL_IN_ONE.wsgi --log-file -
