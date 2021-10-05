@@ -82,7 +82,7 @@ class App{
           if (navigator.geolocation){
                navigator.geolocation.getCurrentPosition(this._loadMap.bind(this),
                function(){
-                    alert('Could not get your positioon');
+                    alert('Could not get your position!');
                })}
      }
 
